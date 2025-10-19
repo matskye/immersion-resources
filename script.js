@@ -5,7 +5,7 @@ let sortDirection = 1; // 1 = ascending, -1 = descending
 
 // === Load Resources from Google Apps Script ===
 async function fetchResources() {
-    const response = await fetch("YOUR_PROXY_URL_HERE"); // same endpoint as before
+    const response = await fetch("https://immersion-resources.matskye28.workers.dev/"); // same endpoint as before
     const data = await response.json();
     allResources = data;
     populateFilters();
@@ -122,7 +122,7 @@ document.querySelector("#resourceForm").addEventListener("submit", async e => {
     const formData = new FormData(e.target);
     const obj = Object.fromEntries(formData.entries());
 
-    const response = await fetch("YOUR_PROXY_URL_HERE", {
+    const response = await fetch("https://immersion-resources.matskye28.workers.dev/", {
         method: "POST",
         body: JSON.stringify(obj),
                                  headers: { "Content-Type": "application/json" }
