@@ -1,0 +1,60 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #fafafa;
+  color: #333;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input, textarea, button {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+#resourceTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#resourceTable th, #resourceTable td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+#resourceTable a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#resourceTable a:hover {
+  text-decoration: underline;
+}
+
+#search {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}

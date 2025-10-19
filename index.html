@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japanese Immersion Resources</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Japanese Immersion Resources</h1>
+
+  <section id="form-section">
+    <h2>Add a Resource</h2>
+    <form id="resourceForm">
+      <input type="text" name="Title" placeholder="Title" required>
+      <input type="text" name="Type" placeholder="Type (e.g., YouTube, Book, Website)" required>
+      <input type="url" name="URL" placeholder="URL" required>
+      <input type="text" name="Tags" placeholder="Tags (comma separated)">
+      <textarea name="Description" placeholder="Short description"></textarea>
+      <input type="text" name="AddedBy" placeholder="Your name or Discord handle">
+      <button type="submit">Add Resource</button>
+    </form>
+    <p id="statusMsg"></p>
+  </section>
+
+  <section id="list-section">
+    <h2>All Resources</h2>
+    <input type="text" id="search" placeholder="Search by title or tag...">
+    <table id="resourceTable">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Type</th>
+          <th>Tags</th>
+          <th>Description</th>
+          <th>Added By</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
