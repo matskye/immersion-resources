@@ -10,10 +10,25 @@
   <h1>Japanese Immersion Resources</h1>
 
   <section id="form-section">
+  <button id="toggleForm">＋ Add a Resource</button>
+  <div id="formContainer" class="collapsed">
     <h2>Add a Resource</h2>
     <form id="resourceForm">
       <input type="text" name="Title" placeholder="Title" required>
-      <input type="text" name="Type" placeholder="Type (e.g., YouTube, Book, Website)" required>
+
+      <select name="Type" required>
+        <option value="">Select type...</option>
+        <option value="Website">Website</option>
+        <option value="YouTube">YouTube</option>
+        <option value="Video">Video (non-YouTube)</option>
+        <option value="Book (furigana)">Book (furigana)</option>
+        <option value="Book (native)">Book (native)</option>
+        <option value="Audio">Audio / Podcast</option>
+        <option value="Game (furigana)">Game (furigana)</option>
+        <option value="Game (native)">Game (native)</option>
+        <option value="Other">Other</option>
+      </select>
+
       <input type="url" name="URL" placeholder="URL" required>
       <input type="text" name="Tags" placeholder="Tags (comma separated)">
       <textarea name="Description" placeholder="Short description"></textarea>
@@ -21,11 +36,31 @@
       <button type="submit">Add Resource</button>
     </form>
     <p id="statusMsg"></p>
+  </div>
+    <p id="statusMsg"></p>
   </section>
 
   <section id="list-section">
     <h2>All Resources</h2>
     <input type="text" id="search" placeholder="Search by title or tag...">
+    <div id="controls">
+  <label>
+    Filter by type:
+    <select id="filterType">
+      <option value="">All</option>
+    </select>
+  </label>
+
+  <label>
+    Sort by:
+    <select id="sortBy">
+      <option value="Title">Title (A–Z)</option>
+      <option value="Type">Type</option>
+      <option value="AddedBy">Added By</option>
+    </select>
+    <button id="sortDir">▲</button>
+  </label>
+</div>
     <table id="resourceTable">
       <thead>
         <tr>
