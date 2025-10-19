@@ -1,6 +1,4 @@
-const API_URL =
-  "https://api.allorigins.win/raw?url=" +
-  encodeURIComponent("https://script.google.com/macros/s/AKfycbwl1MyLLTg6cjt9FLu1rhw_9qCb6DEhwnSiVxXEnqH8sgct2Nw3mHHbrmk3Ax5NnyRV/exec");
+const API_URL = "https://immersion-resources.matskye28.workers.dev/";
 
 const form = document.getElementById("resourceForm");
 const tableBody = document.querySelector("#resourceTable tbody");
