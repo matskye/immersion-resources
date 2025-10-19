@@ -53,7 +53,16 @@ form.addEventListener("submit", async (e) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData)
     });
-    const result = await res.json();
+const text = await res.text();
+console.log("Response text:", text);
+let result;
+try {
+  result = JSON.parse(text);
+} catch {
+  console.error("Non-JSON response:", text);
+  statusMsg.textContent = "⚠️ The server returned a non-JSON response.";
+  return;
+}
     if (result.status === "success") {
       statusMsg.textContent = "✅ Resource added successfully!";
       form.reset();
