@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbxKhOP0RS1kK1eZPmoh2PtuxfMDjiknZKVjcE4W6fm77zZCjHxyiud0WDvReVo9BaKN/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbwl1MyLLTg6cjt9FLu1rhw_9qCb6DEhwnSiVxXEnqH8sgct2Nw3mHHbrmk3Ax5NnyRV/exec";
 
 const form = document.getElementById("resourceForm");
 const tableBody = document.querySelector("#resourceTable tbody");
