@@ -110,3 +110,101 @@ font-size: 1rem;
 background: #1976d2;
 }
 
+/* === Dark Mode === */
+body.dark {
+  background: #1e1e1e;
+  color: #ddd;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select,
+body.dark button {
+  background: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark button {
+  background: #4a90e2;
+}
+
+body.dark button:hover {
+  background: #3b78c2;
+}
+
+body.dark #resourceTable th,
+body.dark #resourceTable td {
+  border-bottom: 1px solid #444;
+}
+
+body.dark #resourceTable a {
+  color: #9dc9ff;
+}
+
+body.dark #controls select,
+body.dark #search {
+  background: #2a2a2a;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+body.dark .tag {
+  background: #2f4f6f;
+  color: #cde4ff;
+}
+
+/* Position and style of the theme toggle */
+#themeToggle {
+display: block;
+margin: 0 auto 1.5rem;
+background: #444;
+color: white;
+border: none;
+border-radius: 6px;
+padding: 0.5rem 1rem;
+cursor: pointer;
+font-size: 0.9rem;
+}
+
+#themeToggle:hover {
+background: #555;
+}
+
+/* Title bar with theme toggle */
+#title-bar {
+display: flex;
+justify-content: center;       /* center content horizontally */
+align-items: center;
+gap: 0.75rem;
+margin-bottom: 1.5rem;
+position: relative;
+}
+
+#title-bar h1 {
+margin: 0;
+}
+
+/* Position the toggle on the right edge */
+#themeToggle {
+position: absolute;
+right: 0;
+background: transparent;
+border: none;
+font-size: 1.5rem;
+cursor: pointer;
+color: #333;
+transition: color 0.2s;
+}
+
+#themeToggle:hover {
+color: #666;
+}
+
+body.dark #themeToggle {
+  color: #eee;
+}
+
+body.dark #themeToggle:hover {
+  color: #ccc;
+}

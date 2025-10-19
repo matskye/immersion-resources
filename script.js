@@ -5,7 +5,7 @@ let sortDirection = 1; // 1 = ascending, -1 = descending
 
 // === Load Resources from Google Apps Script ===
 async function fetchResources() {
-    const response = await fetch("https://immersion-resources.matskye28.workers.dev/"); // same endpoint as before
+    const response = await fetch("YOUR_PROXY_URL_HERE"); // same endpoint as before
     const data = await response.json();
     allResources = data;
     populateFilters();
@@ -122,7 +122,7 @@ document.querySelector("#resourceForm").addEventListener("submit", async e => {
     const formData = new FormData(e.target);
     const obj = Object.fromEntries(formData.entries());
 
-    const response = await fetch("https://immersion-resources.matskye28.workers.dev/", {
+    const response = await fetch("YOUR_PROXY_URL_HERE", {
         method: "POST",
         body: JSON.stringify(obj),
                                  headers: { "Content-Type": "application/json" }
@@ -141,6 +141,25 @@ document.querySelector("#toggleForm").addEventListener("click", () => {
     const isCollapsed = container.classList.toggle("collapsed");
     btn.textContent = isCollapsed ? "＋ Add a Resource" : "− Hide Form";
 });
+
+// === Theme Toggle ===
+const themeToggle = document.querySelector("#themeToggle");
+const userPref = localStorage.getItem("theme");
+
+// Load stored preference or system default
+if (userPref === "dark" || (!userPref && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    document.body.classList.add("dark");
+    themeToggle.textContent = "☀️";
+}
+
+// Toggle behavior
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    const isDark = document.body.classList.contains("dark");
+    themeToggle.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
 
 // === Initialize ===
 fetchResources();
